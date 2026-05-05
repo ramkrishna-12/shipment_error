@@ -1,0 +1,55 @@
+name: Data Pipeline CI/CD
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  schedule:
+    - cron: "0 2 * * *"   # runs daily at 2 AM UTC
+
+jobs:
+  build-and-run-pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run lint (optional but makes you look professional)
+        run: |
+          pip install flake8
+          flake8 .
+
+      - name: Run tests (if you actually wrote any)
+        run: |
+          pip install pytest
+          pytest tests/
+
+      - name: Execute data pipeline
+        run: |
+          python pipeline.py
+
+      - name: Upload output artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: analytics-dataset
+          path: output/analytics_dataset.csv
+
+      - name: Notify success
+        if: success()
+        run: echo "Pipeline executed successfully."
+
+      - name: Notify failure
+        if: failure()
+        run: echo "Pipeline failed. Fix your code instead of blaming CI."
