@@ -1,4 +1,9 @@
+import pandas as pd
+import numpy as np
+import os
+
 def build_dataset(orders, products, shipments):
+    
     # --- Clean products ---
     products['list_price'] = (
         products['list_price']
