@@ -1,3 +1,45 @@
+import pandas as pd
+import numpy as np
+import os
+
+# Create output folder
+os.makedirs("output", exist_ok=True)
+
+# Load CSV
+orders = pd.read_csv("orders.csv")
+
+# Convert date column
+orders["order_date"] = pd.to_datetime(
+    orders["order_date"],
+    errors="coerce",
+    dayfirst=True
+)
+
+# Convert quantity
+orders["quantity"] = pd.to_numeric(
+    orders["quantity"],
+    errors="coerce"
+)
+
+# Remove invalid quantities
+orders = orders[orders["quantity"] > 0]
+
+# Remove missing customer_id
+orders = orders.dropna(subset=["customer_id"])
+
+# Remove duplicate orders
+orders = (
+    orders.sort_values(by="order_date")
+          .drop_duplicates(subset="order_id", keep="last")
+)
+
+# Save cleaned file
+orders.to_csv("output/clean_orders.csv", index=False)
+
+print("Orders cleaned successfully")
+
+
+
 # #
 # # duplicate order id  error
 # orders = orders.sort_values(by="order_date")
@@ -39,43 +81,3 @@
 
 # orders['order_date'] = pd.to_datetime(orders['order_date'], errors='coerce', dayfirst=True)
 # shipments['ship_date'] = pd.to_datetime(shipments['ship_date'], errors='coerce')
-
-import pandas as pd
-import numpy as np
-import os
-
-# Create output folder
-os.makedirs("output", exist_ok=True)
-
-# Load CSV
-orders = pd.read_csv("orders.csv")
-
-# Convert date column
-orders["order_date"] = pd.to_datetime(
-    orders["order_date"],
-    errors="coerce",
-    dayfirst=True
-)
-
-# Convert quantity
-orders["quantity"] = pd.to_numeric(
-    orders["quantity"],
-    errors="coerce"
-)
-
-# Remove invalid quantities
-orders = orders[orders["quantity"] > 0]
-
-# Remove missing customer_id
-orders = orders.dropna(subset=["customer_id"])
-
-# Remove duplicate orders
-orders = (
-    orders.sort_values(by="order_date")
-          .drop_duplicates(subset="order_id", keep="last")
-)
-
-# Save cleaned file
-orders.to_csv("output/clean_orders.csv", index=False)
-
-print("Orders cleaned successfully")
