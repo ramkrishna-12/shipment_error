@@ -6,7 +6,8 @@ os.makedirs("output", exist_ok=True)
 
 orders = pd.read_csv(
     "data/orders.csv",
-    quotechar='"'
+    engine="python",
+    on_bad_lines="warn"
 )
 
 def parse_mixed_dates(x):
