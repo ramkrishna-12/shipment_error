@@ -1,0 +1,101 @@
+product_id,product_name,category,list_price
+P-11,Keyboard,electronics,$49.99
+P-12,Mouse,electronics,$19.99
+P-13,Monitor,electronics,$199.99
+P-14,Desk,furniture,$150.00
+P-15,Chair,furniture,$89.99
+P-16,Laptop,electronics,$999.99
+P-17,Tablet,electronics,$499.99
+P-18,Phone,electronics,$799.99
+P-19,Printer,electronics,$120.00
+P-20,Camera,electronics,$650.00
+P-21,Router,electronics,$85.50
+P-22,SSD,electronics,$110.00
+P-23,HDD,electronics,$75.00
+P-24,USB Cable,electronics,$12.99
+P-25,Power Bank,electronics,$45.00
+P-26,Smart Watch,electronics,$220.00
+P-27,Speaker,electronics,$130.00
+P-28,Microphone,electronics,$99.99
+P-29,Webcam,electronics,$70.00
+P-30,Projector,electronics,$450.00
+P-31,Bookshelf,furniture,$180.00
+P-32,Sofa,furniture,$899.99
+P-33,Coffee Table,furniture,$250.00
+P-34,Bed Frame,furniture,$550.00
+P-35,Mattress,furniture,$700.00
+P-36,Office Chair,furniture,$199.00
+P-37,Lamp,home_decor,$35.00
+P-38,Wall Art,home_decor,$80.00
+P-39,Rug,home_decor,$120.00
+P-40,Curtains,home_decor,$60.00
+P-41,Blender,appliances,$95.00
+P-42,Microwave,appliances,$180.00
+P-43,Toaster,appliances,$40.00
+P-44,Air Fryer,appliances,$150.00
+P-45,Vacuum Cleaner,appliances,$240.00
+P-46,Washing Machine,appliances,$650.00
+P-47,Refrigerator,appliances,$1200.00
+P-48,Dishwasher,appliances,$800.00
+P-49,Oven,appliances,$550.00
+P-50,Ceiling Fan,appliances,$130.00
+P-51,T-Shirt,fashion,$25.00
+P-52,Jeans,fashion,$55.00
+P-53,Jacket,fashion,$120.00
+P-54,Sneakers,fashion,$90.00
+P-55,Socks,fashion,$10.00
+P-56,Backpack,fashion,$65.00
+P-57,Sunglasses,fashion,$75.00
+P-58,Watch,fashion,$150.00
+P-59,Hat,fashion,$20.00
+P-60,Belt,fashion,$30.00
+P-61,Notebook,stationery,$5.00
+P-62,Pen Set,stationery,$15.00
+P-63,Marker,stationery,$8.00
+P-64,Stapler,stationery,$12.00
+P-65,Desk Organizer,stationery,$25.00
+P-66,Calculator,stationery,$20.00
+P-67,Whiteboard,stationery,$55.00
+P-68,Sticky Notes,stationery,$6.00
+P-69,File Folder,stationery,$9.00
+P-70,Paper Pack,stationery,$18.00
+P-71,Basketball,sports,$35.00
+P-72,Football,sports,$30.00
+P-73,Tennis Racket,sports,$120.00
+P-74,Yoga Mat,sports,$40.00
+P-75,Dumbbells,sports,$85.00
+P-76,Treadmill,sports,$950.00
+P-77,Cricket Bat,sports,$110.00
+P-78,Cycling Helmet,sports,$70.00
+P-79,Skipping Rope,sports,$15.00
+P-80,Protein Shaker,sports,$12.00
+P-81,Dog Food,pets,$45.00
+P-82,Cat Toy,pets,$10.00
+P-83,Bird Cage,pets,$120.00
+P-84,Fish Tank,pets,$250.00
+P-85,Pet Bed,pets,$55.00
+P-86,Leash,pets,$18.00
+P-87,Pet Shampoo,pets,$14.00
+P-88,Pet Bowl,pets,$9.00
+P-89,Pet Carrier,pets,$65.00
+P-90,Cat Litter,pets,$22.00
+P-91,Guitar,music,$350.00
+P-92,Piano Keyboard,music,$450.00
+P-93,Drum Set,music,$700.00
+P-94,Violin,music,$280.00
+P-95,Headphones,music,$95.00
+P-96,Amplifier,music,$320.00
+P-97,Studio Mic,music,$180.00
+P-98,Audio Mixer,music,$260.00
+P-99,Music Stand,music,$40.00
+P-100,Ukulele,music,$75.00
+P-101,Action Figure,toys,$35.00
+P-102,Board Game,toys,$45.00
+P-103,RC Car,toys,$120.00
+P-104,Teddy Bear,toys,$25.00
+P-105,Lego Set,toys,$90.00
+P-106,Puzzle,toys,$18.00
+P-107,Toy Train,toys,$55.00
+P-108,Drone,toys,$450.00
+P-109,Water Gun,toys,$15.00
+P-110,Building Blocks,toys,$30.00
