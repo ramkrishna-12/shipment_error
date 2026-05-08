@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  etl-pipeline:
+    build: .
+    container_name: shipment_pipeline
+
+    volumes:
+      - ./output:/app/output
+
+    command: python pipeline.py
