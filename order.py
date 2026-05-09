@@ -14,9 +14,8 @@ os.makedirs("output", exist_ok=True)
 orders = pd.read_csv(
     "data/orders.csv",
     engine="python",
-    quotechar='"'
+    on_bad_lines="skip"
 )
-
 # -----------------------------
 # Mixed Date Parser
 # -----------------------------
